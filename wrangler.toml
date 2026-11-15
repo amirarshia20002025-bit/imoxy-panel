@@ -1,0 +1,28 @@
+name = "imoxy-panel"
+main = "src/index.js"
+compatibility_date = "2026-01-15"
+compatibility_flags = ["nodejs_compat"]
+
+# شناسه‌ها عمداً خالی‌اند: Deploy button خودش می‌سازد و ID واقعی را می‌نویسد
+[[d1_databases]]
+binding = "DB"
+database_name = "sentra-db"
+database_id = "9d9bcad0-d878-4d47-b81b-b712952d59c5"
+migrations_dir = "migrations"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "4a57f4373a8a4d769e001782696936c9"
+
+[[rules]]
+type = "Text"
+globs = ["**/*.txt"]
+
+[triggers]
+crons = ["0 3 * * *"]
+
+[vars]
+APP_NAME = "SENTRA"
+DEFAULT_LANG = "fa"
+# این را به یک رشته تصادفی ۱۶ کاراکتری خودتان عوض کنید
+BOT_PATH_SECRET = "change-me-random-16-chars"
